@@ -2,14 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "vite.config.ts",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "dist" }
     }
   ],
   "framework": "vite",
-  "buildCommand": "npm install && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "installCommand": "npm install",
   "ignoreCommand": "git diff --quiet HEAD^ HEAD .",
   "env": {
     "VITE_STRIPE_PUBLIC_KEY": "@vite_stripe_public_key",
